@@ -29,8 +29,10 @@ import streamlit as st
 from dataclasses import dataclass
 from typing import Any, List
 from web3 import Web3
+from eth_account import Account
 
 w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
+
 ################################################################################
 # Step 1:
 # Import Ethereum Transaction Functions into the KryptoJobs2Go Application
@@ -311,6 +313,7 @@ if st.sidebar.button("Send Transaction"):
 # The function that starts the Streamlit application
 # Writes KryptoJobs2Go candidates to the Streamlit page
 get_people()
+
 
 ################################################################################
 # Step 3: Inspect the Transaction
